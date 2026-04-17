@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@import "tailwind-animations";
+@theme {
+    /*variables*/
+    --color-variable: #1e2e30;
+    --color-secondary: #ff6f91;
+    /*breakpoint*/
+    --breakpoint-xs:350px;
+}
+/* con el apply podemos ahorrar escribir clases repetitivas */
+.social-button{
+    @apply p-4 rounded-full shadow-lg bg-linear-to-tr from-pink-500 via-red-500 to-yellow-500 hover:scale-105 transition-transform size-12 sm:size-16
+    flex items-center justify-center ;
+}
+
+.social-button svg {
+    display: inline-block;
+}
+
+.tech-card {
+    @apply text-white relative rounded-3xl overflow-hidden min-h-28
+    flex flex-col items-start justify-between p-3 border border-white/15 shadow-lg
+    hover:scale-[1.02] hover:contrast-125 transition-transform duration-300;
+}
+.tech-card-izquierda {
+    @apply text-white relative rounded-3xl overflow-hidden min-h-36 sm:min-h-40 flex flex-col items-start justify-end p-3 border  hover:scale-[1.02] hover:contrast-125  col-span-1 sm:col-span-2 transition-colors duration-300 ease-in-out
+    ;
+}
+.tech-card-derecha{
+    @apply text-white relative rounded-3xl overflow-hidden min-h-36 sm:min-h-40 flex flex-col items-start justify-end p-3 border  hover:scale-[1.02] hover:contrast-125  col-span-1 transition-colors duration-300 ease-in-out;
+}
+.texto-arriba{
+    @apply absolute top-2 left-2 text-xs border rounded-xl px-2 py-0.5
+}
+.texto-de-tech{
+    @apply font-black text-2xl leading-none group-hover:scale-110
+}
+.pocicion-card-izquierda{
+    @apply absolute -right-2 -bottom-2 opacity-90 w-20 h-50 sm:w-30 sm:h-40 me-3 group-hover:-rotate-12 group-hover:scale-125 transition-transform
+}
+.posicion-card-derecha{
+    @apply absolute -right-2 -bottom-2 opacity-90 w-20 h-50 me-3 group-hover:-rotate-12 group-hover:scale-125 transition-transform
+}
+.svg-social{
+    @apply w-8 h-8 text-white; 
+}
